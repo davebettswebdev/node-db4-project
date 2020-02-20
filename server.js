@@ -9,13 +9,13 @@ server.use(express.json());
 server.use('/api/recipes', RecipeRouter);
 
 server.get('/', (req, res) => {
-    res.send('Recipe API is running!');
+    res.send('<h1>Recipe API is running!<h1');
   });
   
   server.use((err, req, res, next) => {
     console.log(err)
     res.status(500).json({
-      message: 'Something went wrong'
+      message: 'Unable to launch!'
     })
   })
 
